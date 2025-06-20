@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Flipbook</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipbookjs@latest/dist/flipbook.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e0f7fa;
+    }
+
+    #flipbook-container {
+      width: 90vw;
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="flipbook-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flipbookjs@latest/dist/flipbook.min.js"></script>
+  <script>
+    const container = document.getElementById("flipbook-container");
+    FlipBook.create(container, {
+      pdf: "dokumenmu.pdf", // Ganti dengan path PDF kamu
+    });
+  </script>
+</body>
+</html>
 
