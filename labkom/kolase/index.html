@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>PDF Flipbook</title>
-  <link href="https://cdn.jsdelivr.net/npm/dflip/css/dflip.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/dflip/dist/dflip.min.css" rel="stylesheet">
   <style>
-    body, html { margin:0; height:100%; }
-    #flipbookContainer { width:90%; height:100vh; margin: auto; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #f0f8ff;
+    }
+
+    .flipbook-wrapper {
+      width: 90%;
+      height: 90vh;
+      margin: auto;
+    }
+
+    .dflip-book {
+      height: 100% !important;
+    }
   </style>
 </head>
 <body>
-  <div id="flipbookContainer"></div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dflip/js/dflip.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("#flipbookContainer").flipBook("heyzine.pdf", {
-        height: 1000,
-        duration: 800
-      });
-    });
-  </script>
+  <div class="flipbook-wrapper">
+    <!-- Inisialisasi flipbook lewat data-pdf -->
+    <div class="dflip-book" data-pdf="heyzine.pdf"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/dflip/dist/dflip.min.js"></script>
 </body>
 </html>
