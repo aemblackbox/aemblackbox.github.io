@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Gradien</title>
+    <title>Welcome, Blackbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(to bottom right, #a0d8ef, #e0f7fa);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
+        /* Animasi untuk smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
-
-        .center-text {
-            font-size: 2em;
-            color: #004d80;
-            text-align: center;
+        /* Custom hover effect untuk project cards */
+        .project-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <div class="center-text">Halo, ini teks di tengah layar!</div>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Hi, I'm [Your Name]</h1>
+            <p class="text-xl mb-6">A Passionate Penetration Tester</p>
+            <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100">View My Work</a>
+        </div>
+    </section>
 </body>
 </html>
-
